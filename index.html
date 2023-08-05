@@ -2,24 +2,96 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catatan</title>
+	<!-- Title -->
+    <title>Catatan Austin</title>
+	<!-- Title -->
     <link rel="stylesheet" href="/css/new.css">
 	<link rel="stylesheet" href="/css/common.css">
+    <style>
+        :root {
+            --light-image-src: url('./image/banner-light.jpg');
+            --dark-image-src: url('image/banner-dark.jpg');
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .banner-img {
+                content: var(--dark-image-src);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .banner-img {
+                content: var(--light-image-src);
+            }
+        }
+
+        .banner-img {
+            margin: 0;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .row .item {
+            background: var(--nc-bg-2);
+            padding: 2rem;
+            max-width: 20%;
+            border-radius: 8px;
+            border: 1px solid var(--nc-bg-3);
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .row .item img {
+            border-radius: 8px;
+            border: 1px solid var(--nc-bg-3);
+        }
+
+        .banner, h2{
+            color: #000;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+        }
+    </style>
 </head>
 <body>
 	<header>
+		<!-- Nama pelajaran/materi -->
 		<h1>Catatan Austin</h1>
-		<p>Catatan</p>
+		<!-- Nama pelajaran/materi -->
 		<nav>
-			
+			<!-- <a href="/">Home</a> / -->
+			<!-- <a href="../"><~ Kembali</a> / -->
+			<!-- Isi link materi -->
+			<!-- <a href="../"><~ Materi sebelumnya</a> / -->
+			<!-- <a href="../">~> Materi berikutnya</a> -->
+			<!-- Isi link materi -->
 		</nav>
 	</header>
 	<main>
-	<strong>Pelajaran</strong>
-	<ul>
-	<li><a href="Matematika">Matematika</a></li>
-	<li><a href="KTI">KTI</a></li>
-	</ul>
-
-</main>
+		<!-- Content -->
+		<div class="banner">
+            <img class="banner-img">
+        </div>
+        <div class="row">
+            <div class="item" onclick="location.href='/Matematika';">
+                <img src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg">
+                <h4>Matematika</h4>
+            </div>
+            <div class="item" onclick="location.href='/KTI';">
+                <img src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg">
+                <h4>KTI</h4>
+            </div>
+            <div class="item" onclick="location.href='/PKWU';">
+                <img src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg">
+                <h4>PKWU</h4>
+            </div>
+        </div>
+		<!-- Content -->
+	</main>
 </body>
